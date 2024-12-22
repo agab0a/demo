@@ -1,0 +1,40 @@
+﻿<Window x:Class="Chua_De_07.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chua_De_07"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" FontFamily="Times New Roman" FontSize="18" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Mã Thuốc:" HorizontalAlignment="Left" Margin="80,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tên Thuốc" HorizontalAlignment="Left" Margin="80,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="Giá Bán" HorizontalAlignment="Left" Margin="80,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Số Lượng:" HorizontalAlignment="Left" Margin="80,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Danh Mục Thuốc:" HorizontalAlignment="Left" Margin="80,170,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtMaThuoc" HorizontalAlignment="Left" Margin="216,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" Height="27"/>
+        <TextBox x:Name="txtSoLuong" HorizontalAlignment="Left" Margin="216,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" Height="27"/>
+        <TextBox x:Name="txtGiaBan" HorizontalAlignment="Left" Margin="216,94,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" Height="27"/>
+        <TextBox x:Name="txtTenThuoc" HorizontalAlignment="Left" Margin="216,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="352" Height="27"/>
+        <ComboBox Name="cbbDanhMucThuoc" HorizontalAlignment="Left" Margin="216,172,0,0" VerticalAlignment="Top" Width="184"/>
+        <DataGrid Margin="68,206,68,87" AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  AlternatingRowBackground="LightPink"
+                  Name="dgThuoc"
+                  SelectedCellsChanged="dgThuoc_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã Thuốc" Binding="{Binding MaThuoc}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Tên Thuốc" Binding="{Binding TenThuoc}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Mã Định Mức" Binding="{Binding MaDm}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Giá Bán" Binding="{Binding GiaBan}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Số Lượng" Binding="{Binding SoLuong}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Thành Tiên" Binding="{Binding ThanhTien}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Thêm"  HorizontalAlignment="Left" Margin="132,368,0,0" VerticalAlignment="Top" Width="79" Height="25" Click="Button_Click"/>
+        <Button Content="Sửa" HorizontalAlignment="Left" Margin="272,368,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_1"/>
+        <Button Content="Xóa" HorizontalAlignment="Left" Margin="400,368,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_2"/>
+        <Button Content="Tìm" HorizontalAlignment="Left" Margin="539,368,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_3"/>
+
+    </Grid>
+</Window>
